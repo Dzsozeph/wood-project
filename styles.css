@@ -1,0 +1,1256 @@
+@charset "utf-8";
+
+	body, html{
+		width: 100vw;
+		height: 100vh;
+		padding: 0;
+		margin: 0;
+		background: rgb(23,15,10);
+        background: linear-gradient(0deg, rgba(23,15,10,1) 19%, rgba(56,35,23,1) 91%);
+		scroll-behavior: smooth;
+	}
+	
+.menu-bar li a.active {
+	
+	color:saddlebrown;
+	box-shadow: 0 0 10px saddlebrown;
+	border-radius: 20%;
+	padding: 10px
+}
+
+.menu-bar li a{
+  color: inherit;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 15px; /* Szélesség (függőleges sávnál) */
+    height: 12px; /* Magasság (vízszintes sávnál) */
+}
+
+/* A görgetősáv fogantyúja */
+::-webkit-scrollbar-thumb {
+    background: rgb(152,99,65);
+    background: radial-gradient(circle, rgba(152,99,65,1) 50%, rgba(255,255,255,1) 95%);
+    border-radius: 6px; /* Lekerekített sarkok */
+    border: 3px solid transparent; /* Átlátszó keret a fogantyú körül */
+    background-clip: content-box; /* Belülre helyezi a háttértartalmat */
+}
+
+/* A görgetősáv háttérsávja */
+::-webkit-scrollbar-track {
+    background-color: white;/* Háttér szín */
+    border-radius: 6px; /* Lekerekített sarkok */
+}
+
+/* Ha az egérmutató a görgetősáv fogantyúján van */
+::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+}
+
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.arsenal-sc-regular {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+	
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.glory-style {
+  font-family: "Glory", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.gruppo-regular {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#cursor-circle {
+    position: absolute;
+    width: 500px; /* A kör átmérője */
+    height: 500px;
+    border-radius: 50%;
+    background: rgb(143,94,62);
+    background: radial-gradient(circle, rgba(143,94,62,1) 19%, rgba(56,35,23,0.5326505602240896) 100%);
+    transform: translate(-50%, -50%); /* Középpontra igazítás */
+    z-index: 1;
+    overflow: hidden;
+	box-shadow: 0 0 300px #986341;
+	opacity: 0.8;
+	transition: top 0.15s ease, left 0.15s ease; /* Lassítás a mozgatáshoz */
+    pointer-events: none; /* Hogy ne akadályozza a kattintásokat */
+}
+	
+	.spinner-container{
+	    position: relative;
+	    display: flex;
+		top: -2vh;
+		left: 40vw;
+		z-index: 1;
+		animation: slide-in 2s forwards; /* Az elem automatikusan belép */
+		
+	}
+		
+    .spinner {
+	animation: spin 5s linear infinite;
+	width: 90px;
+	height: 90px;
+	border-radius: 200px;
+	border: 7px solid white;
+	border-bottom-color: transparent;
+	z-index:1;	
+	cursor: grab;
+	
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Kezdő és végső pozíció */
+    }
+    40% {
+        transform: translateY(-30px); /* Felfelé ugrás */
+    }
+    60% {
+        transform: translateY(-15px); /* Második ugrás */
+    }
+}
+	
+@keyframes slide-in {
+    0% {
+        left: -100%; /* Kezdő pozíció */
+    }
+    100% {
+        left: 85%; /* Középre lép */
+        transform: translate(-50%, -50%); /* Középre igazítás */
+    }
+}
+
+
+
+    .spinner-container h1{
+	top: 1.3vh;
+	left: 1.6vw;
+	font-size: 20px;
+	color:white;
+	position: absolute;
+	z-index: 3;
+	
+	
+	
+}
+
+
+	@keyframes spin {
+		from{
+			transform: rotate(0deg);
+		} 
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+   .background{
+    width: 100%;
+    height: 100%;
+    background: rgb(23,15,10);
+    background: linear-gradient(0deg, rgba(23,15,10,1) 19%, rgba(56,35,23,1) 91%);
+}
+	
+	.logo{
+		position: relative;
+		width: 360px;
+		height: 120px;
+		top: -10vh;
+		left: 0vw;
+		margin-right: 20px;
+		background-image: url("logo4.png");
+		background-size: cover;
+		z-index: 2;
+		
+	}
+	
+
+	nav {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	    background-color: rgba(0,0,0,0.9);
+		box-shadow: 0 0 50px saddlebrown;
+		height: 17vh;
+		z-index: 10;
+	}	
+	
+	nav li{
+		position: relative;
+		display:inline-block;
+		margin-top: 5vh;
+		margin-right: 40px;
+		padding: 20px;
+		list-style: none;
+		z-index: 100;
+		left: 35%;
+		cursor: pointer;
+
+	}
+
+a {
+	text-decoration: none;
+}
+	
+	.nav-text{
+		color: #807469;
+		font-size: 23px;
+		font-weight: 500;
+		
+	}
+	
+nav li:nth-child(1):hover {
+    color: white; /* Az első menüpont hover színe */
+	
+}
+
+nav li:nth-child(2):hover {
+    color: white; /* A második menüpont hover színe */
+}
+
+nav li:nth-child(3):hover {
+    color: white; /* A harmadik menüpont hover színe */
+}
+	nav li:nth-child(4):hover {
+    color: white; /* A harmadik menüpont hover színe */
+}
+
+nav li:nth-child(5):hover {
+    color: white; /* A harmadik menüpont hover színe */
+}
+nav li:nth-child(6):hover {
+    color: white; /* A harmadik menüpont hover színe */
+}
+
+.home-icon {
+    position: absolute;
+    bottom: 5vh;
+    left: 25vw;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.home-icon img {
+    width: 60%;
+    height: 60%;
+}
+
+.home-icon:hover{
+
+    box-shadow: 0 0 50px saddlebrown;
+
+	
+}
+
+.home-icon.active {
+    box-shadow: 0 0 50px saddlebrown;
+}
+.section-1
+	{
+		position: relative;
+		top: 20vh;
+		margin-left: 13vw;
+		z-index: 3;
+}
+
+	
+
+	.section-1 h1{
+		color:white;
+		font-size: 100px;
+		font-weight: 300;
+	}
+
+	
+	.section-1 h2{
+		font-size: 20px;
+		color:white;
+		margin-top: -8vh;
+		
+		}
+	
+
+	
+	
+	.section-1	p{ 
+		position: relative;
+		color: #F7A26C;
+		font-size: 20px;
+		top: 9vh;
+	}  
+	
+
+
+  .glry-container {
+  position: relative;
+  width: 56vw;
+  min-height: 64vh;
+  margin-top: -18vh;
+  filter: drop-shadow(0 0 50px rgba(95,64,20,1.00)); /* Alkalmazz drop-shadow-t a külső konténerre */
+  z-index: 2;
+  animation: slide-in-left 3s forwards;
+
+	  
+ 
+	  
+}
+
+@keyframes slide-in-left {
+    0% {
+        right: 100%; /* Kezdő pozíció */
+    }
+    100% {
+        left: 35%; /* Középre lép */
+        transform: translate(-50%, -50%); /* Középre igazítás */
+		top: 32%;
+    }
+}
+	
+
+.section-1-glry{
+		position: relative;
+		width: 56vw;
+		min-height: 64vh;
+	    left: 40vw;
+		margin-top: -20vh;
+		background-image: url("woodborder.jpg"); /* A szegély háttérképe */
+        background-size: cover, 100%; /* A kép teljes terjedelme, a gradient a konténer teljes szélességén */
+		background-repeat: no-repeat;
+		background-position: center;
+		clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	    transform: translateZ(0); /* Stacking context kényszerítése */
+}
+
+.section-1-glry::after {
+    content: "";
+    position: absolute;
+    width: 60vw;
+	height: 90vh;
+    background-image: url("woodborder.jpg"); /* A szegély háttérképe */
+	background-image: url("statue1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	animation: changeBackground 70s infinite;
+
+}
+	
+
+.socialmedia-bar{
+	position: absolute;
+	top: 4vh;
+	right: 10vh;
+	width: 5vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	z-index: 1;
+	}
+	.social-icon img {
+    width: 2vw; /* Az ikonok szélessége a bar szélességének megfelelően */
+    margin-right: 25px; /* Függőleges térköz az ikonok között */
+    transition: transform 0.3s; /* Animáció a hover effektushoz */
+	z-index: 1;
+		
+}
+	
+	.social-icon img:hover {
+	box-shadow: 0 0 30px sandybrown;
+	border-radius: 40px;
+}
+.social-icon img:hover {
+    transform: scale(1.1); /* Ikonok nagyítása hover esetén */
+}
+
+
+
+	
+.button-contact{
+		position: absolute;
+	    width: 10vw;
+	    min-height: 5vh;
+		margin-top: 23vh;
+	    left: 13vw;
+	    z-index: 3;
+	    color: white;
+	    background: rgb(152,99,65);
+        background: radial-gradient(circle, rgba(152,99,65,1) 50%, rgba(152,99,65,0.9304096638655462) 65%, rgba(152,99,65,0.8323704481792717) 75%, rgba(152,99,65,0.8183648459383753) 85%, rgba(152,99,65,0.7959558823529411) 95%);
+	    border-radius: 3px;
+	    cursor: pointer;
+	    font-weight: 600px;
+	    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	    border: solid white 2px;
+	}
+	
+.button-contact:hover{
+	background: rgb(152,99,65);
+    background: radial-gradient(circle, rgba(152,99,65,1) 50%, rgba(255,255,255,1) 95%);
+	transform: scale(1.1); /* Ikonok nagyítása hover esetén */
+	transition: transform 0.3s ease-in-out; /* Simítás és időzítés beállítása */
+	}
+	
+	
+	
+	.button-container h1{
+	 color:white;
+		
+	}
+	
+	
+	
+.message-form-container {
+	display: none;
+    position: absolute; /* Szülőelem pozicionálása relatív */
+    width: 95vw; /* Kívánt szélesség */
+    height: 80vh; /* Kívánt magasság */
+	z-index: 3;
+	margin: auto;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	transform: translate(-50%, -50%); /* Középpontra igazítás */
+	left: 50vw;
+	background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(149,96,63,1) 100%);
+	margin-top: 10vh;
+
+}
+
+.msg-form-header {
+    position: absolute; /* Abszolút pozicionálás a háttérhez */
+    top: 0; /* Felül */
+    left: 0; 
+    width: 100%; /* Teljes szélesség */
+    height: 16vh; /* Kívánt magasság */
+    background-image: url("wood3.jpg");
+    background-size: cover;
+    opacity: 1;
+    z-index: 1; /* Háttér z-index */
+}
+	
+.msg-form-header h1{
+	color:white;
+	font-size: 50px;
+	font-weight: 100;
+	margin-top: 18vh;
+	z-index: 3;
+	text-shadow: 2px 2px 3px grey;
+	}
+
+
+.text {
+    position: relative; /* Abszolút pozicionálás a szöveghez és formhoz */
+    top: 30%; /* Állítsd be, hogy a form alatt legyen */
+    left: 50%; /* Középre */
+    transform: translate(-50%, -50%); /* Középre igazítás */
+    z-index: 2; /* Z-index a szöveghez és formhoz */
+	color:black;
+	font-weight: 600;
+	font-size: 12px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	
+}
+	
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+	position: relative;
+    margin-bottom: -3vh;
+	
+}
+
+
+input, textarea {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+	border: 6px solid #4B3122;
+	box-shadow: 0 0 20px grey;
+	border-radius: 25px;
+	resize:inherit;
+	
+}
+
+.btn-send{
+	background-color: burlywood;
+	width: 16vh;
+	height: 4vh;
+	box-shadow: 0 0 30px grey;
+	background: radial-gradient(circle, rgba(152,99,65,1) 50%, rgba(152,99,65,0.9304096638655462) 65%, rgba(152,99,65,0.8323704481792717) 75%, rgba(152,99,65,0.8183648459383753) 85%, rgba(152,99,65,0.7959558823529411) 95%);
+	border-radius: 3px;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	color:white;
+	cursor: pointer;
+	top: 33vh;
+	
+}
+.btn-send:hover{
+    background: rgb(152,99,65);
+    background: radial-gradient(circle, rgba(152,99,65,1) 50%, rgba(255,255,255,1) 95%);
+	transform: scale(1.1); /* Ikonok nagyítása hover esetén */
+	transition: transform 0.3s ease-in-out; /* Simítás és időzítés beállítása */
+}
+
+.btn-close {
+    position: absolute;
+    margin-top: 10vh;
+    right: 10px; /* Jobbról */
+    background: none;
+    border: none;
+    font-size: 20px; /* Méret */
+    cursor: pointer;
+	background-color: white;
+	border-radius: 30%;
+}
+
+.csakteszt{
+	    position: absolute;
+		left: -20vw;
+		top: -10vh;
+		width: 50vw;
+		height: 50vh;
+		background-color: white;
+		z-index: -1;
+	}
+	
+	/*.nav-bar{
+		top:0;
+		width: 100vw;
+		height: 20vh;
+		background-color: rgba(0,0,0,0.8);
+		z-index: 1;*/
+
+	
+@keyframes changeBackground {
+  0% {
+        background-image: url('statue1.jpg');
+  }
+  25% {
+        background-image: url('statue2.jpg');
+  }
+  45% {
+		background-image: url('statue4.jpg');
+	}
+65% {
+		background-image: url('statue5.jpg');
+	}
+}
+/*------------------------------------------EFFEKTEK-------------------------------------------------------------------------*/
+
+.fade-in-section {
+    opacity: 0; /* Kezdetben átlátszó */
+    transform: translateY(20vh); /* Kicsit lejjebb van */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Animációs átmenetek */
+}
+
+.fade-in-section.visible {
+    opacity: 1; /* Láthatóvá válik */
+    transform: translateY(0); /* Visszatér az eredeti pozícióba */
+}
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%); /* Jobbról kezdő pozíció */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Eredeti pozícióba áll */
+}
+
+
+
+
+
+.section-about {
+    height: 100vh; /* vagy bármilyen méret */
+    position:relative;
+    background: rgb(54,34,23);
+    background: linear-gradient(0deg, rgba(54,34,23,1) 0%, rgba(117,71,41,1) 0%, rgba(82,50,28,1) 25%, rgba(47,28,15,1) 50%, rgba(23,15,10,1) 87%);
+    
+}
+
+.btn-back-to-top {
+    position: absolute;
+    top: 20vh;
+    display: block;
+    right: 2vw;
+    width: 60px;
+    height: 60px;
+    background-image: url("up.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 3;
+  }
+
+.btn-up1{
+	position: absolute;
+    top: 20vh;
+    display: block;
+    right: 2vw;
+     width: 60px;
+    height: 60px;
+    background-image: url("up.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 2;
+}
+.btn-up2{
+	position: absolute;
+    top: 50vh;
+    display: block;
+    right: 2vw;
+     width: 60px;
+    height: 60px;
+    background-image: url("up.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 4;
+}
+
+.btn-up3{
+	position: absolute;
+    top: 20vh;
+    display: block;
+    right: 2vw;
+     width: 60px;
+    height: 60px;
+    background-image: url("up.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 3;
+}
+.btn-down1 {
+    position: absolute;
+    top: 88vh;
+    display: block;
+    right: 2vw;
+    width: 60px;
+    height: 60px;
+    background-image: url("down.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 3;
+  }
+.btn-down2 {
+    position: absolute;
+    top: 88vh;
+    display: block;
+    left: 2vw;
+     width: 60px;
+    height: 60px;
+    background-image: url("down.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.btn-down3 {
+    position: absolute;
+    top: 88vh;
+    display: block;
+    left: 2vw;
+     width: 60px;
+    height: 60px;
+    background-image: url("down.png");
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.btn-back-to-top:hover{
+	transform: scale(1.1);
+	transition: transform 0.3s ease-in-out; /* Simítás és időzítés beállítása */
+	}
+
+.portre{
+	margin-top: 24vh;
+	position:absolute;
+	display: flex;
+	width: 40vw;
+	height: 76vh;
+	background-image: url("face.png");
+	background-size: cover;
+	z-index:3;
+	transition: transform 0.5s ease; /* Simítás a mozgáshoz */
+	
+}
+
+.portre:hover {
+    transform: scale(1.05) translateY(-10px); /* Növeli a méretét és mozgatja felfelé */
+}
+
+.text-box{
+	position: absolute;
+	width: 50vw;
+	height: 50vh;
+	right: 10vw;
+	margin-top: 35vh;
+	z-index: 3;
+    opacity: 0; /* Kezdő állapot */
+	
+}
+
+.animate {
+    animation: slide-up 1s ease forwards;
+    opacity: 1; /* Az animáció során láthatóvá válik */
+}
+
+.text-box h1 {
+	color: white;
+	font-size: 70px;
+	font-weight: 300;
+	
+	}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%) rotate(10deg); /* Kezdő pozíció: alulról érkezik és felfelé dől */
+        opacity: 0; /* Fokozatos megjelenés */
+    }
+    50% {
+        opacity: 0.5; /* Félig átlátszó a középső pontban */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg); /* Végső pozíció: középen áll */
+        opacity: 1; /* Teljesen látható */
+    }
+}
+
+.text-box p {
+	color: white;
+	font-size: 20px;
+	}
+
+.signature{
+	
+	position: absolute;
+	width: 10vw;
+	height: 10vh;
+	right: 20vw;
+	margin-top: 5vh;
+	background-image: url("signature.png");
+	background-size: cover;
+	z-index: 3;
+	
+}
+
+
+.section-work {
+	
+	height: 100vh; /* vagy bármilyen méret */
+    position:relative;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 8%, rgba(114,70,40,1) 25%, rgba(52,30,15,1) 65%);
+  
+}
+
+.slider-container{
+    position:relative;
+	width: 95vw;
+	text-align: center;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+    margin: auto;
+	z-index: 3;
+    opacity: 0;
+}
+.slider{
+	top: 30vh;
+    position: relative;
+    width: 80vw; /* Beállíthatod a kívánt szélességet */
+    margin: auto;
+    overflow: hidden;
+	z-index: 1;
+	min-height: 20vh;
+
+	
+	
+
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+	z-index: 3;
+	
+	
+}
+
+.slide {
+    min-width: 20vw; /* Két képet jelenít meg */
+    box-sizing: border-box; /* Tartalom belső margóját figyelembe veszi */
+	background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(78,53,36,1) 32%, rgba(79,53,36,1) 65%);
+    max-height: 70vh;
+    box-shadow: 0 0 20px;
+	margin-right: 10vw;
+	
+} 
+
+
+
+.slide h1 {
+	color:white;
+	font-size: 40px;
+	text-align: center;
+	}
+
+.slide p {
+	color:white;
+	font-size: 20px;
+	text-align: center;
+	}
+.slide p:hover {
+	color:sandybrown;
+	cursor: pointer;
+	}
+
+.slides img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+
+}
+
+.slide img:hover {
+      transform: scale(1.1); /* Ikonok nagyítása hover esetén */
+	transition: transform 0.5s ease; /* Simítás hozzáadása a transform tulajdonsághoz */
+} 
+
+
+button {
+    position: absolute;
+    top: 50%;
+	background-size: cover;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+	z-index: 3;
+	text-align: center;
+	list-style: none;
+	text-decoration: none;
+	margin-left: 0vw;
+	margin-right: 0vw;
+	
+
+}
+
+.prev, .next {
+    position: absolute; /* A gombok abszolút pozicionálása */
+    top: 50%; /* Középre pozicionálás függőlegesen */
+    transform: translateY(-50%); /* A gombok függőleges középre igazítása */
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+    text-align: center;
+}
+
+.prev {
+    left: 0; /* Bal szél */
+}
+
+.next {
+    right: 0; /* Jobb szél */
+}
+
+.slider-text-box{
+	position: relative;
+	top: 5vh;
+	margin:auto;
+}
+
+
+/*
+PRICE SECTION-----------PRICE SECTION------------PRICE SECTION-----------PRICE SECTION------------PRICE SECTION-----------PRICE SECTION
+*/
+
+.section-prices{
+	
+	position: relative;
+	justify-content: center; /* Horizontális középre igazítás */
+	display:flex;
+	width: 100vw;
+	height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(28,17,10,1) 12%, rgba(22,14,8,1) 20%, rgba(22,13,7,1) 45%, rgba(0,0,0,1) 75%);
+}
+
+.section-prices h1{
+	color: white;
+	font-size: 110px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 50vh;
+	position: relative; /* Pozicionálás szükséges az ::after elemhez */
+	
+	}
+
+.btn-contact2::after {
+	content: ""; /* Üres tartalom */
+	position: absolute;
+	bottom: -5vh; /* Az aláhúzás távolsága a szövegtől */
+	left: 50%; /* Középre igazítás */
+	width: 5%; /* Az aláhúzás szélessége */
+	height: 2px; /* Az aláhúzás vastagsága */
+	background-color: sandybrown; /* Az aláhúzás színe */
+	transform: translateX(-50%); /* Középre igazítás */
+	transition: width 0.5s ease; /* Átmenet a szélességhez */
+	border-radius: 20px;
+}
+
+.btn-contact2:hover::after {
+	width: 80%;
+	
+}
+
+
+.sctn-prices-header{
+	position: absolute;
+	width: 100vw;
+	height: 25vh;
+	background-image: url("footer.png");
+	margin-top: 17vh;
+	z-index: 3;
+   
+}
+
+
+
+.btn-contact2{
+	position:absolute;
+	border-radius: 50% 50% 50% 50%;
+	background-color: transparent;
+	z-index:3;
+	width: 30px;
+	height: 30px;
+	padding: 50%;
+	
+}
+
+/*.btn-contact2:hover{
+	animation: billeges 2s infinite ease-in-out;
+	
+}
+
+@keyframes billeges {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+*/
+.circle-container {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: transparent;
+  margin-top: 30vh;
+
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Átlátszó háttér az SVG-n belül */
+  animation: rotateText 10s linear infinite;
+
+}
+
+text {
+  font-size: 10px; /* A szöveg mérete, vékony, hogy csak a kör szélén legyen látható */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  fill: sandybrown; /* Szöveg színe (például fehér) */
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.socialmedia-bar2 {
+    display: flex;
+    justify-content: center;
+	gap: 3vw; /* Térköz a barok között */
+	
+    
+}
+
+.social-item {
+    border: solid 1px #A5722A;
+    border-radius: 30px; /* Lekerekített sarkok */
+	padding: 8px;
+	z-index: 3;
+	width: 5vw;
+	display: flex; /* Flexbox aktiválása */
+    justify-content: center; /* Tartalom középre igazítása */
+    align-items: center; /* Függőleges középre igazítás */
+}
+.social-item:hover {
+    background-color: sandybrown; /* Hover háttérszín */
+}
+
+.social-item:hover a {
+    color: black; /* Link színe hover állapotban */
+	
+}
+.social-item a {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-weight: 400;
+	margin: 0 auto;
+    text-decoration: none; /* Link aláhúzás eltávolítása */
+    color: sandybrown;
+	font-size: 18px;
+	
+}
+
+
+
+
+
+
+/*
+CUSTOMER SECTION-----------CUSTOMER SECTION------------CUSTOMER SECTION-----------CUSTOMER SECTION------------CUSTOMER SECTION-----------CUSTOMER SECTION
+*/
+
+
+
+
+
+
+
+.section-customers{
+	position:relative;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(55,33,19);
+    background: linear-gradient(0deg, rgba(55,33,19,1) 0%, rgba(0,0,0,1) 38%);
+	
+	
+}
+
+.card-container {
+  top: 40vh;
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Két oszlop */
+  gap: 30px;
+  z-index: 3;
+  margin-left: 5vw;
+  
+
+}
+.card-container h1{ 
+    color:white; 
+	font-size: 70px;
+	position: absolute; 
+	top: -20vh;
+	margin-left: 5vw;
+	font-weight: 500;
+	
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Kezdő pozíció: balról */
+        opacity: 0; /* Kezdetben átlátszó */
+    }
+    100% {
+        transform: translateX(0); /* Végső pozíció: középen */
+        opacity: 1; /* Végén teljesen látható */
+    }
+}
+
+/* Alkalmazás a card-container elemre */
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 2px #61412C;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  width: 15vw;
+  
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card p {
+  font-size: 17px;
+  margin-bottom: 22px;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.customer {
+  display: flex;
+  align-items: center;
+}
+
+.customer img {
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.customer span {
+  font-style: italic;
+  color: #fdb15a;
+	font-size: 15px;
+}
+
+.customer-bckg{
+	width: 45vw;
+	height: 70vh;
+	position: absolute;
+	right: 7vw;
+	background-image: url("lion5.png");
+	background-size: cover;
+	z-index: 3;
+	top: 25vh;
+	display: block; /* Ellenőrizd, hogy látható legyen */
+
+}
+.customer-bckg.shake {
+    animation: earthquake 0.5s ease-in-out;
+}
+
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    20% { transform: translate(-30px, 10px); }  /* Balra és lefelé */
+    40% { transform: translate(30px, -10px); }  /* Jobbra és felfelé */
+    60% { transform: translate(-30px, 10px); }  /* Balra és lefelé */
+    80% { transform: translate(30px, -10px); }  /* Jobbra és felfelé */
+    100% { transform: translate(0); }
+}
+
+
+@keyframes earthquake {
+    0% { transform: translate(0); }
+    10% { transform: translate(-5px, 0); }
+    20% { transform: translate(5px, 0); }
+    30% { transform: translate(-5px, 0); }
+    40% { transform: translate(5px, 0); }
+    50% { transform: translate(-5px, 0); }
+    60% { transform: translate(5px, 0); }
+    70% { transform: translate(-5px, 0); }
+    80% { transform: translate(5px, 0); }
+    90% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+.customer-bckg:hover {
+ animation: shake 0.7s ease-in-out;
+	
+	}
+
+footer{
+	position: relative;
+	bottom: 0;
+	height: 5vh;
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+	z-index:3;
+}
+footer h1{
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font-weight: 300;
+	font-size: 11px;
+	color: white;
+	position: relative;
+	top: 2vh;
+	}

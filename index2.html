@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Glory:ital,wght@0,100..800;1,100..800&family=Gruppo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Prata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="C:\Users\Jonas\Desktop\wood-project\favicon_io\favicon-32x32.png" sizes="16x16 32x32">
+<meta charset="utf-8">
+<title>WoodExpert - Bringing Wood to Life</title>
+</head>
+<nav>
+    <div class="nav-bar" id="nav-bar">
+		   <a href="#home" class="home-icon" onclick="scrollToTop()">
+                    <img src="home2.png" alt="Home">
+                </a>
+            
+        <div class="menu-bar bebas-neue-regular nav-text">
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#customers">Customers</a></li>
+        </div>
+    </div>
+
+	
+	<a href="javascript:location.reload()">
+  <div class="logo"></div>
+</a>
+
+	<div class="socialmedia-bar">
+    <a href="#" class="social-icon"><img src="fb.png" alt="Social Media 1"></a>
+    <a href="#" class="social-icon"><img src="insta.png" alt="Social Media 2"></a>
+    <a href="#" class="social-icon"><img src="linkedin.png" alt="Social Media 3"></a>
+</div>
+		
+</nav>
+
+<body>
+
+<section id="section-1">
+	<div class="section-1">
+	<p class="glory-style">Expert in woods</p>
+	<h1 class="text-section-1 glory-style">Bringing<br>Wood to Life</h1>
+	<h2 class="text-section-1 glory-style">Expertly carved wooden sculptures<br>and figurines that showcase<br>the natural beauty and versatility of wood</h2>
+	</div>
+	<button a href="#message-form" class="button-contact fade-in-section">Contact Me</button>
+	
+	
+	
+	
+<div class="message">
+<div class="message-form-container">
+	
+    <div class="msg-form-header">
+	
+	<h1 class="new-amsterdam-regular">Come closer to your dreams</h1> <!-- Középre igazított szöveg -->
+	<button class="btn-close">✖</button> <!-- Bezáró gomb -->
+	</div> <!-- Background -->
+	
+	
+    <div class="text">
+
+        <form action="/send-message" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn-send">Send Message</button>
+        </form>
+		
+		<div class="csakteszt"></div>
+    </div>
+</div>
+</div>
+</section>
+
+	
+
+	
+
+<div class="glry-container">
+ <div class="section-1-glry">
+	</div>
+		
+	</div>
+	<div id="cursor-circle"></div>
+	
+	<div class="spinner-container">
+	<h1 class="glory-style">Scroll<br>Down</h1>
+	<div class="spinner"></div>
+ 
+</div>
+	
+<section id="about">
+	<div class="section-about">
+	 <button class="btn-back-to-top"></button>
+		<button class="btn-down1"></button>
+	<div class="portre"></div>
+	<div class="text-box">
+		<h1 class="glory-style"> Wood is my <br>passion</h1>
+		<p class="glory-style">Hi, I'am Jack, a wood carving artist with 20 years of experience in creating unique, handcrafted wooden masterpieces that tell a story. My skills in carving design, and finishing have been honed over the years, allowing me to create stunning sculptures, figurines, furnite, and decorations.</p>
+		<div class="signature"></div>
+		</div>
+	</div>
+	</section>
+
+<section id="work">
+	<div class="section-work">
+        <button class="btn-up1"></button>
+		<button class="btn-down2"></button>
+		<div class="slider-container">
+	    <div class="slider">
+        <div class="slides">
+        <div class="slide"><img src="architect.png" alt="Kép 1"  style="position:relative; top:5vh;">
+		 <div class="slider-text-box">
+			<h1 class="glory-style">Architectural</h1>
+			<p class="glory-style">View Gallery</p>
+			</div>
+			</div>
+			
+             <div class="slide"><img src="decorations.PNG" alt="Kép 2">
+				
+				<h1 class="glory-style txt-slider">Decorations</h1>
+				<p class="glory-style">View Gallery</p>
+			
+				 </div>
+			
+            <div class="slide"> <img src="furniture.PNG" alt="Kép 3" style="position:relative; top:8vh;">	
+			 <div class="slider-text-box" style="position: relative; top: 11.5vh;">
+			<h1 class="glory-style">Furnitures</h1>
+			<p class="glory-style">View Gallery</p>
+				 	</div>
+			</div>
+			
+            <div class="slide"> <img src="relief.PNG" alt="Kép 4" style="position: relative; text-align: center; top: 3vh;">
+				
+			 <div class="slider-text-box" style="position:relative; top:15vh;">
+				<h1 class="glory-style txt-slider" id="relief-fix">Relief</h1>
+			<p class="glory-style">View Gallery</p>
+				</div>
+				</div>
+			   <div class="slide"> <img src="figurines.PNG" alt="Kép 4">
+				   			 <div class="slider-text-box" style="position:relative; top:10vh;">
+				   <h1 class="glory-style">Figurines</h1>
+			<p class="glory-style">View Gallery</p>
+								 </div>
+				</div>
+			  <div class="slide"> <img src="dartveder.PNG" alt="Kép 4" style="width: 20vw; height: 36vh;">
+				 <div class="slider-text-box" style="position:relative; top:10vh;">
+				  <h1 class="glory-style">Statues</h1>
+			<p class="glory-style">View Gallery</p>
+				    </div>
+				</div>
+        </div>
+			
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+	</div>
+	</div>
+</section>
+	
+	
+		<section id="prices">
+	<div class="section-prices">
+	<!--	<button class="btn-contact2"></button>-->
+	<div class="circle-container">
+		<button a href="#message-form" class="btn-contact2"></button>
+  <svg viewBox="0 0 100 100" class="circle-svg">
+    <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+    <text>
+      <textpath href="#circlePath">Contact Contact Contact Contact</textpath>
+    </text>
+  </svg>
+</div>
+		 <button class="btn-up2"></button>
+		<button class="btn-down3"></button>
+	<div class="sctn-prices-header">
+	
+		<h1 class="prata-regular">Let's Talk</h1>
+			<div class="socialmedia-bar2">
+    <div class="social-item">
+        <a href="https://link1.com">Facebook</a>
+    </div>
+    <div class="social-item">
+        <a href="https://link2.com">Instagram</a>
+    </div>
+    <div class="social-item">
+        <a href="https://link3.com">Email</a>
+    </div>
+</div>
+		</div>
+
+			</div>
+	</section>
+
+	
+<section id="customers">
+  <div class="section-customers">
+	  <button class="btn-up3"></button>
+	  <div class="customer-bckg"></div>
+    <div class="card-container">
+		
+      <h1 class="glory-style">Happy Customers</h1>
+      <div class="card">
+        <p>"I ordered a Darth Vader bust from this wood carving business and I was blown away by the attention to detail and craftsmanship. It's a stunning piece of art!"</p>
+        <div class="customer">
+          <img src="csmportre3.png" alt="David Johnson">
+          <span>David Johnson</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <p>"I commissioned a custom wood carving from this artist and they exceeded all of my expectations. Their attention to detail is truly remarkable."</p>
+        <div class="customer">
+          <img src="csmportre2.png" alt="Lionel Dawson">
+          <span>Lionel Dawson</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p>"I received a wood carving as a gift from this artist and it is now one of my most prized possessions. The quality and craftsmanship is truly unmatched."</p>
+        <div class="customer">
+          <img src="csmportre1.png" alt="Stacia Bud">
+          <span>Stacia Bud</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p>"I have been a collector of wood carvings for years and I have to say that this artist is one of the best I have ever come across. Their work is truly exceptional."</p>
+        <div class="customer">
+          <img src="csmportre4.png" alt="Kristeen Alesia">
+          <span>Kristeen Alesia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+	<h1>Webdesign: Jonas Webdevelopment (R) 2024</h1>
+
+	</footer>
+	
+	
+	<script src="scripts.js"></script>
+</body>
+</html>
