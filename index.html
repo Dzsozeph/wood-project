@@ -7,22 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Glory:ital,wght@0,100..800;1,100..800&family=Gruppo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Prata&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="C:\Users\Jonas\Desktop\wood-project\favicon_io\favicon-32x32.png" sizes="16x16 32x32">
 <meta charset="utf-8">
-<title>Wood Expert</title>
+<title>WoodExpert - Bringing Wood to Life</title>
 </head>
 <nav>
     <div class="nav-bar" id="nav-bar">
-    <div class="menu-bar bebas-neue-regular nav-text">
-		<div id="home" class="active-home">
-  <a href="#" class="home-icon" onclick="scrollToTop()">
-    <img src="home2.png" alt="Home">
-  </a>
-</section>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Works</a></li>
-        <li><a href="#prices">Prices</a></li>
-        <li><a href="#customers">Customers</a></li>
+		   <a href="#home" class="home-icon" onclick="scrollToTop()">
+                    <img src="home2.png" alt="Home">
+                </a>
+            
+        <div class="menu-bar bebas-neue-regular nav-text">
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#customers">Customers</a></li>
+        </div>
     </div>
 
 	
@@ -35,26 +38,29 @@
     <a href="#" class="social-icon"><img src="insta.png" alt="Social Media 2"></a>
     <a href="#" class="social-icon"><img src="linkedin.png" alt="Social Media 3"></a>
 </div>
-		</div>
+		
 </nav>
+
 <body>
-	
+
 <section id="section-1">
 	<div class="section-1">
-		<button a href="#message-form" class="button-contact">Contact Me</button>
 	<p class="glory-style">Expert in woods</p>
 	<h1 class="text-section-1 glory-style">Bringing<br>Wood to Life</h1>
 	<h2 class="text-section-1 glory-style">Expertly carved wooden sculptures<br>and figurines that showcase<br>the natural beauty and versatility of wood</h2>
 	</div>
-
-
+	<button a href="#message-form" class="button-contact fade-in-section">Contact Me</button>
+	
+	
+	
+	
 <div class="message">
 <div class="message-form-container">
 	
     <div class="msg-form-header">
 	
 	<h1 class="new-amsterdam-regular">Come closer to your dreams</h1> <!-- Középre igazított szöveg -->
-	
+	<button class="btn-close">✖</button> <!-- Bezáró gomb -->
 	</div> <!-- Background -->
 	
 	
@@ -77,13 +83,17 @@
     </div>
 </div>
 </div>
+</section>
 
+	
+
+	
 
 <div class="glry-container">
  <div class="section-1-glry">
 	</div>
 		
-	
+	</div>
 	<div id="cursor-circle"></div>
 	
 	<div class="spinner-container">
@@ -91,16 +101,11 @@
 	<div class="spinner"></div>
  
 </div>
-	</div>
-	</section>
-
-
-
-
+	
 <section id="about">
 	<div class="section-about">
 	 <button class="btn-back-to-top"></button>
-	 <button class="btn-down1"></button>
+		<button class="btn-down1"></button>
 	<div class="portre"></div>
 	<div class="text-box">
 		<h1 class="glory-style"> Wood is my <br>passion</h1>
@@ -112,7 +117,8 @@
 
 <section id="work">
 	<div class="section-work">
-		
+        <button class="btn-up1"></button>
+		<button class="btn-down2"></button>
 		<div class="slider-container">
 	    <div class="slider">
         <div class="slides">
@@ -162,27 +168,45 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 	</div>
-		 <button class="btn-up1"></button>
-		 <button class="btn-down2"></button>
 	</div>
 </section>
 	
 	
 		<section id="prices">
 	<div class="section-prices">
-    <button class="btn-up2"></button>
+	<!--	<button class="btn-contact2"></button>-->
+	<div class="circle-container">
+		<button a href="#message-form" class="btn-contact2"></button>
+  <svg viewBox="0 0 100 100" class="circle-svg">
+    <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+    <text>
+      <textpath href="#circlePath">Contact Contact Contact Contact</textpath>
+    </text>
+  </svg>
+</div>
+		 <button class="btn-up2"></button>
 		<button class="btn-down3"></button>
-	
 	<div class="sctn-prices-header">
-		<h1 class="glory-style">Let's Talk</h1>
-		</div>
 	
+		<h1 class="prata-regular">Let's Talk</h1>
+			<div class="socialmedia-bar2">
+    <div class="social-item">
+        <a href="https://link1.com">Facebook</a>
+    </div>
+    <div class="social-item">
+        <a href="https://link2.com">Instagram</a>
+    </div>
+    <div class="social-item">
+        <a href="https://link3.com">Email</a>
+    </div>
+</div>
+		</div>
+
 			</div>
 	</section>
 
 	
 <section id="customers">
-	
   <div class="section-customers">
 	  <button class="btn-up3"></button>
 	  <div class="customer-bckg"></div>
@@ -227,222 +251,8 @@
 	<h1>Webdesign: Jonas Webdevelopment (R) 2024</h1>
 
 	</footer>
-<script>
 	
 	
-	document.addEventListener('mousemove', function(e) {
-    const circle = document.getElementById('cursor-circle');
-    circle.style.left = e.pageX + 'px';
-    circle.style.top = e.pageY + 'px';
-});
-	
-	  document.querySelector('.button-contact').addEventListener('click', function(event) {
-        event.preventDefault(); // Megakadályozza az alapértelmezett hivatkozás viselkedést
-        const formContainer = document.querySelector('.message-form-container');
-        
-        // Ellenőrzi, hogy látható-e az elem
-        if (formContainer.style.display === 'none' || formContainer.style.display === '') {
-            formContainer.style.display = 'flex'; // Megnyitja az űrlapot
-        } else {
-            formContainer.style.display = 'none'; // Bezárja az űrlapot, ha már meg van nyitva
-        }
-    });
-	
-	
-	//------------------------------------------------------------------------------------------------------------------------//
-	
-	
-	
-	document.querySelector('.spinner').addEventListener('click', function() {
-  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-});
-	
-	
-		//------------------------------------------------------------------------------------------------------------------------//
-	
-	
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.btn-back-to-top').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0, // A képernyő legteteje
-            behavior: 'smooth' // Sima görgetés
-        });
-    });
-});
-	
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.btn-up1').addEventListener('click', function() {
-        const aboutSection = document.getElementById('about');
-        aboutSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-	
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.btn-up2').addEventListener('click', function() {
-        const workSection = document.getElementById('work');
-        workSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-	
-	window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.btn-up3').addEventListener('click', function() {
-        const pricesSection = document.getElementById('prices');
-        pricesSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-		//------------------------------------------------------------------------------------------------------------------------//
-	
-
-	
-	
-	
-	
-	
-	
-	
-const button = document.querySelector('.btn-down1');
-const workSection = document.getElementById('work');
-
-// Eseménykezelő a gombra kattintáskor
-button.addEventListener('click', () => {
-    // Görgessen a work szekcióhoz
-    workSection.scrollIntoView({
-        behavior: 'smooth' // Simult görgetés
-    });
-});
-	
-	  document.querySelector('.btn-down2').addEventListener('click', function() {
-        const pricesSection = document.getElementById('prices');
-        pricesSection.scrollIntoView({ behavior: 'smooth' });
-    });
-	
-	document.querySelector('.btn-down3').addEventListener('click', function() {
-        const customersSection = document.getElementById('customers');
-        customersSection.scrollIntoView({ behavior: 'smooth' });
-    });
-	
-
-
-	//------------------------------------------------------------------------------------------------------------------------//
-	
-	
-	
-	
-	
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".menu-bar li a");
-const homeIcon = document.querySelector(".home-icon");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            const currentSection = entry.target.getAttribute("id");
-            
-            // Eltávolítjuk az 'active' osztályt az összes menüelemről
-            navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").includes(currentSection)) {
-                    link.classList.add("active");
-                }
-            });
-
-            // A home-icon kezelése, ha a 'home' szekció aktív
-            if (currentSection === "home") {
-                homeIcon.classList.add("active");
-            } else {
-                homeIcon.classList.remove("active");
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
-sections.forEach((section) => {
-    observer.observe(section);
-});
-	
-	//------------------------------------------------------------------------------------------------------------------------//
-	
-const portre = document.querySelector('.portre');
-let isMouseInside = false; // Flag a mouse enter és leave események kezelésére
-
-// Eseményfigyelők a mouse enter és mouse leave eseményekhez
-portre.addEventListener('mouseenter', () => {
-    isMouseInside = true; // Az egér a portre elem felett van
-});
-
-portre.addEventListener('mouseleave', () => {
-    isMouseInside = false; // Az egér elhagyta a portre elemet
-    portre.style.transform = 'translate(0, 0)'; // Visszaállítjuk az eredeti pozícióra
-});
-
-// Eseményfigyelő a mousemove eseményhez
-document.addEventListener('mousemove', (event) => {
-    if (isMouseInside) { // Csak akkor mozogjon, ha az egér a portre felett van
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-
-        // Az elem pozíciója az egér pozíciójának ellentétes irányban
-        const offsetX = (window.innerWidth / 2 - mouseX) / 20; // A mozgás érzékenysége
-        const offsetY = (window.innerHeight / 2 - mouseY) / 20;
-
-        portre.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    }
-});
-	
-	
-	
-	
-	//------------------------------------------------------------------------------------------------------------------------//
-	
-	
-let slideIndex = 0;
-let direction = 1; // Kezdés jobbra (1: jobbra, -1: balra)
-
-const slideMargin = 70; // A slide-ok közötti margin (10vw = 10% a viewport szélességéből)
-
-function showSlide(index) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = slides.children.length;
-
-    if (index >= totalSlides) {
-        slideIndex = 0;
-    } else if (index < 0) {
-        slideIndex = totalSlides - 1;
-    } else {
-        slideIndex = index;
-    }
-
-    // A slide-ok szélessége (20vw) plusz a margó (10vw)
-    const slideWidth = 20; // Két slide szélessége (20vw)
-    slides.style.transform = `translateX(${-slideIndex * (slideWidth + slideMargin)}vw)`;
-}
-
-function moveSlide(direction) {
-    showSlide(slideIndex + direction);
-}
-
-// Automatikus jobbra és balra mozgás beállítása
-function autoSlide() {
-    setInterval(() => {
-        moveSlide(direction); // Egyet mozdul a megadott irányba
-        direction *= -1; // Irányváltás (jobbra-balra)
-    }, 8000); // 8 másodperces intervallum
-}
-
-// Kezdő slide megjelenítése és az automatikus mozgás indítása
-showSlide(slideIndex);
-autoSlide();
-
-	
-//**********************************************************************************************************************//
-	
-	
-
-	
-	
-	
-	
-	
-	</script>
+	<script src="scripts.js"></script>
 </body>
 </html>
