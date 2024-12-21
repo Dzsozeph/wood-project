@@ -345,28 +345,16 @@ nav li:nth-child(6):hover {
 		min-height: 64vh;
 	    left: 40vw;
 		margin-top: -20vh;
-		background-image: url("woodborder.jpg"); /* A szegély háttérképe */
+		background-image: url("statue1.jpg"); /* A szegély háttérképe */
         background-size: cover, 100%; /* A kép teljes terjedelme, a gradient a konténer teljes szélességén */
 		background-repeat: no-repeat;
 		background-position: center;
 		clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 	    transform: translateZ(0); /* Stacking context kényszerítése */
+		animation: changeBackground 70s infinite;
 }
 
-.section-1-glry::after {
-    content: "";
-    position: absolute;
-    width: 60vw;
-	height: 90vh;
-    background-image: url("woodborder.jpg"); /* A szegély háttérképe */
-	background-image: url("statue1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-	animation: changeBackground 70s infinite;
 
-}
 	
 
 .socialmedia-bar{
